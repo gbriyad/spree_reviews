@@ -18,7 +18,7 @@
   <% else %>
     <span itemprop="author"><%= Spree.t(:anonymous) %></span>
   <% end %>
-  <div itemprop="reviewBody">
+  <div itemprop="reviewBody" class="product-review-content-body">
     <%= simple_format(review.review) %>
   </div>
   <% if Spree::Reviews::Config[:feedback_rating] && (!Spree::Reviews::Config[:require_login] || spree_current_user) %>
